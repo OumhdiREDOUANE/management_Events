@@ -16,7 +16,7 @@
 #ul1,#ul2{
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 45px;
     align-items: center;
     font-family: 'Tajawal Regular';
     font-size: medium;
@@ -28,9 +28,13 @@
 
 #ul2{
     gap: 20px;
+    z-index: 3;
+    padding-left:75px ;
+    transition: padding-left 0.3s ease
 }
 #ul2 li{
     color: white;
+    z-index: 3;
 }
 #ul2 a{
     color: white;
@@ -56,15 +60,31 @@
     vertical-align: middle; /* توسيط السهم */
     content: ""; /* السهم */
     font-size: 12px; /* حجم السهم */
+    
   }
-
+  .dropdown-toggle:focus{
+    color: #f4c82c;
+  }
 .btn:hover{
     color: #f4c82c;
 }
-.btn {
-    
-    border: none;
+.dropdown{
+    color: white;
 }
+.btn {
+    color: white;
+    border: none;
+    all: unset;
+    transition: color 0.3s ease;
+
+    
+    
+
+}
+.btn:active,.btn:focus{
+    color: #f4c82c;
+}
+
 .btn.show {
     border-color: transparent;
     border: none;
@@ -77,20 +97,54 @@
     color: #f4c82c;
 
 }
-#serche{
-    border-radius: 20px;
+#serche,#btn{
+   
+    border-radius: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
     border: none;
     z-index: 4;
+    width: 165px;
+    line-height: 20px;
+    height: 46px;
+    transition: transform 0.3s ease ; /* Transition the transform property */
+  ;}
+#btn{
+    background-color: #f4c82c;
+    font-weight:500;
+    padding-left: 18px;
+    z-index: 0;
+    text-align: left;
+    transition: background-color 0.3s ease
+    
 }
+#btn:hover {
+    background-color: #172e86;
+
+}
+#btn:hover ~ .icon_right_arrow{
+    background-color: #f4c82c;
+}
+
 #serche:focus{
+
     border: none;
     outline: none;
+    width: 170px;
+    transform: scaleX(1.26);
+margin-left: 35px;
+transform-origin: right center ;
+
+
 }
+#ul2.focused {
+    padding-left: 50px; /* تحريك العنصر إلى اليسار */
+    
+  }
+
 #serche::placeholder{
-    color: blue;
+    color: #172e86;
     font-weight:500;
 }
 .search-icon{
