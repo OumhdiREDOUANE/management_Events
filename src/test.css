@@ -1,0 +1,40 @@
+.search-input .input-group {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-input .search-field {
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .search-input .search-icon {
+background-color: transparent;
+    color: #1c1fe6;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    font-size: 18px;
+    border-radius: 50px;
+  }
+  
+  .search-input .search-field::placeholder {
+    color: #1005a7; /* Matches the placeholder style in the design */
+    font-size: 16px;
+  }
+  
+  .search-field:focus {
+    outline: none;
+ 
+  }
+  
+  

@@ -1,0 +1,67 @@
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.container {
+    position: relative; /* لتموضع العناصر داخل الحاوية */
+    width: 300px; /* عرض الحاوية */
+    height: 300px; /* ارتفاع الحاوية */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    
+
+}
+  
+  /* القواعد المشتركة لكل الدوائر */
+  .circle {
+    position: absolute; /* يجعل العناصر متداخلة */
+    border-radius: 50%; /* يجعل العناصر دائرية */
+  }
+  
+  /* الدائرة المركزية (الصورة) */
+  .center-circle {
+    width: 417px;
+    height: 417px;
+    overflow: hidden; /* لإخفاء الأجزاء الزائدة للصورة */
+    background-color: rgb(201, 49, 49); /* خلفية للصورة */
+    z-index: 10; /* فوق جميع الدوائر */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .center-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لجعل الصورة تغطي الدائرة */
+  }
+  
+  /* الدائرة الأولى */
+  .outer-circle-1 {
+    width: 441px;
+    height: 441px;
+    background-color: red; /* لون الإطار */
+    z-index: 3; /* أسفل الصورة */
+  }
+  
+  /* الدائرة الثانية */
+  .outer-circle-2 {
+    width: 500px;
+    height: 500px;
+    background-color: blue; /* لون الإطار */
+    z-index: 2; /* أسفل الدائرة الأولى */
+  }
+  
+  /* الدائرة الثالثة */
+  .outer-circle-3 {
+    width: 556px;
+    height: 556px;
+    background-color:  green; /* لون الإطار */
+    z-index: 1; /* أسفل كل شيء */
+    
+  }
+  

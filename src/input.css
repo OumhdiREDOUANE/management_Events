@@ -1,0 +1,101 @@
+
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+@font-face {
+    font-family: "Tajawal Regular"; /* اسم الخط المحلي */
+    src: local("/dist/Tajawal Regular/Tajawal Regular.ttf"); /* تحديد المصدر المحلي */
+  }
+
+
+#logo{
+    width: 100px;
+    height: 100px;
+}
+#ul1,#ul2{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: 'Tajawal Regular';
+    font-size: medium;
+    font-weight: bold;
+    line-height: 20px;
+    
+    
+}
+
+#ul2{
+    gap: 20px;
+}
+#ul2 li{
+    color: white;
+}
+#ul2 a{
+    color: white;
+    text-decoration: none;
+}
+#ul2 a:hover{
+    color: #f4c82c;
+    text-decoration: none;
+}
+.dropdown-toggle{
+    color: white;
+    font-family: 'Tajawal Regular';
+    font-size: medium;
+    font-weight: bold;
+    line-height: 20px;
+
+
+    
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 8px; /* مسافة بين النص والسهم */
+    vertical-align: middle; /* توسيط السهم */
+    content: ""; /* السهم */
+    font-size: 12px; /* حجم السهم */
+  }
+
+.btn:hover{
+    color: #f4c82c;
+}
+.btn {
+    
+    border: none;
+}
+.btn.show {
+    border-color: transparent;
+    border: none;
+    color: #f4c82c;
+}
+
+
+.btn.show:active{
+    border: none;
+    color: #f4c82c;
+
+}
+#serche{
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border: none;
+    z-index: 4;
+}
+#serche:focus{
+    border: none;
+    outline: none;
+}
+#serche::placeholder{
+    color: blue;
+    font-weight:500;
+}
+.search-icon{
+    position: absolute;
+  top: 33%;
+  left: 80%;
+  color: blue;
+}
