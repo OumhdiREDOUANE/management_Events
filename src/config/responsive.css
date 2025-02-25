@@ -1,0 +1,15 @@
+@media screen and  (max-width:576px){
+    *{
+        
+     padding: 0px;
+     margin: 0px;
+    }
+    nav{
+ 
+display:grid;
+grid-template-columns:20px 20px;
+gap:60px;
+
+    }
+    
+}

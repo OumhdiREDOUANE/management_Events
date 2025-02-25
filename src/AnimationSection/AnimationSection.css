@@ -1,0 +1,173 @@
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+@font-face {
+  font-family: "Tajawal Regular"; /* اسم الخط المحلي */
+  src: local("/dist/Tajawal Regular/Tajawal Regular.ttf"); /* تحديد المصدر المحلي */
+}
+.container {
+    position: relative; /* لتموضع العناصر داخل الحاوية */
+    width: 300px; /* عرض الحاوية */
+    height: 300px; /* ارتفاع الحاوية */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    top: 60px;
+    
+
+}
+  
+  /* القواعد المشتركة لكل الدوائر */
+  .circle {
+    position: absolute; /* يجعل العناصر متداخلة */
+    border-radius: 50%; 
+    /* يجعل العناصر دائرية */
+  }
+  
+  /* الدائرة المركزية (الصورة) */
+  .center-circle {
+    width: 475px;
+    height: 475px;
+    overflow: hidden; /* لإخفاء الأجزاء الزائدة للصورة */
+    z-index: 10; /* فوق جميع الدوائر */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .center-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لجعل الصورة تغطي الدائرة */
+  }
+  
+  /* الدائرة الأولى */
+  .outer-circle-1 {
+    width: 514px;
+    height: 514px;
+    background-color: #6a3db6; /* لون الإطار */
+    z-index: 5; /* أسفل الصورة */
+    opacity: 0.5;
+  }
+  
+  /* الدائرة الثانية */
+  .outer-circle-2 {
+    width: 594px;
+    height: 594px;
+    background-color: #523ab1; /* لون الإطار */
+    z-index: 2; /* أسفل الدائرة الأولى */
+    top: -137.5px;
+    opacity: 0.4;
+  }
+  
+  /* الدائرة الثالثة */
+  .outer-circle-3 {
+    width: 689px;
+    height: 689px;
+    background-color:  #3547aa; /* لون الإطار */
+    z-index: 1; /* أسفل كل شيء */
+    opacity: 0.3;
+  }
+  .outer-circle-4 {
+    width: 268%;
+    height: 804px;
+    background-color:  #4044b0; /* لون الإطار */
+    z-index: 0; /* أسفل كل شيء */
+    opacity: 0.2;
+  }
+  .outer-circle-5 {
+    width: 1700px;
+    height: 1700px;
+    background-color:  #5438b1; /* لون الإطار */
+    z-index: -1; /* أسفل كل شيء */
+    opacity: 0.18;
+  }
+  .information{
+    width: 664px;
+    padding-left: 133px;
+    color: white;
+  }
+  .containerIcon{
+    display: flex;
+    position: relative;
+    width: fit-content;
+  }
+  .icon img{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  .icon_right_arrow img{
+    width: 15px;
+    height: 15px;
+    font-weight:900;
+    
+  }
+  .icon_right_arrow{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: #3547aa;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+  top: 24%;
+  left: 74%;
+  z-index: 1;
+  transition: background-color 0.3s ease
+    
+  }
+  .titel{
+    font-family: "Tajawal Regular";
+    font-weight:bolder;
+    font-size: 75px;
+    line-height: 78px;
+    margin-bottom: 45px;
+  }
+  .mini_titel{
+    font-family: "Tajawal Regular";
+    font-size: 15px;
+    font-weight:bolder;
+    line-height: 22px;
+    margin-bottom: 47px;
+  }
+  .information p{
+    font-family: "Tajawal Regular";
+    font-size: 15px;
+  }
+  .containerIconBtn{
+    margin-top: 41px;
+  } 
+  #serche,#btn{
+   
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border: none;
+    z-index: 4;
+    width: 165px;
+    line-height: 20px;
+    height: 46px;
+    transition: transform 0.3s ease ; /* Transition the transform property */
+  ;}
+#btn{
+    background-color: #f4c82c;
+    font-weight:500;
+    padding-left: 18px;
+    z-index: 0;
+    text-align: left;
+    transition: background-color 0.3s ease
+    
+}
+#btn:hover {
+    background-color: #172e86;
+
+}
+#btn:hover ~ .icon_right_arrow{
+    background-color: #f4c82c;
+}

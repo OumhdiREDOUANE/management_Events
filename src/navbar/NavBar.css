@@ -1,0 +1,367 @@
+* {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+@font-face {
+    font-family: "Tajawal Regular";
+    /* اسم الخط المحلي */
+    src: local("/dist/Tajawal Regular/Tajawal Regular.ttf");
+    /* تحديد المصدر المحلي */
+}
+
+.nav{
+    display: flex;
+    gap: 300px;
+    padding-top: 6px;
+    width: 100vw;
+
+}
+.lastLi{
+    position: relative;
+    width:fit-content;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+#ul1,
+#ul2 {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    font-family: 'Tajawal Regular';
+    font-size: medium;
+    font-weight: bold;
+    line-height: 20px;
+
+
+}
+
+#ul2 {
+    gap: 20px;
+    z-index: 3;
+    padding-left: 75px;
+    transition: padding-left 0.3s ease
+}
+
+#ul2 li {
+    color: white;
+    z-index: 3;
+}
+
+#ul2 a {
+    color: white;
+    text-decoration: none;
+}
+
+#ul2 a:hover {
+    color: #f4c82c;
+    text-decoration: none;
+}
+
+.dropdown-toggle {
+    color: white;
+    font-family: 'Tajawal Regular';
+    font-size: medium;
+    font-weight: bold;
+    line-height: 20px;
+
+
+
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 8px;
+    /* مسافة بين النص والسهم */
+    vertical-align: middle;
+    /* توسيط السهم */
+    content: "";
+    /* السهم */
+    font-size: 12px;
+    /* حجم السهم */
+
+}
+
+.dropdown-toggle:focus {
+    color: #f4c82c;
+}
+
+.btn:hover {
+    color: #f4c82c;
+}
+
+.dropdown {
+    color: white;
+}
+
+.btn {
+    color: white;
+    border: none;
+    all: unset;
+    transition: color 0.3s ease;
+
+
+
+
+}
+
+.btn:active,
+.btn:focus {
+    color: #f4c82c;
+}
+
+.btn.show {
+    border-color: transparent;
+    border: none;
+    color: #f4c82c;
+}
+
+
+.btn.show:active {
+    border: none;
+    color: #f4c82c;
+
+}
+
+#serche {
+
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border: none;
+    z-index: 4;
+    width: 165px;
+    line-height: 20px;
+    height: 46px;
+    transition: transform 0.3s ease;
+    /* Transition the transform property */
+    ;
+}
+
+#serche:focus {
+
+    border: none;
+    outline: none;
+    width: 170px;
+    transform: scaleX(1.26);
+    margin-left: 35px;
+    transform-origin: right center;
+
+
+}
+
+#ul2.focused {
+    padding-left: 50px;
+    /* تحريك العنصر إلى اليسار */
+
+}
+
+#serche::placeholder {
+    color: #172e86;
+    font-weight: 500;
+}
+
+.search-icon {
+    position: absolute;
+    top: 33%;
+    left: 80%;
+    color: blue;
+}
+
+@media screen and  (max-width: 767px) {
+#div{
+    transition: all 8s ease-out;
+}
+#logo{
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+    position:absolute;
+    left: 6%;
+}
+
+#btn-menu{
+    all: unset;
+}
+.navOpen{
+    height: 400px;
+    background-color: #172e86;
+    transition: background-color 0.3s ease-in ;
+}
+#button {
+    position: relative;
+    width: 15vw;
+    height: 15vw;
+    left: 80%;
+    cursor: pointer;
+    
+    
+
+  }
+  
+  
+  
+  #icon {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    height: 100%;
+  }
+  
+  /* MENU ICON */
+  
+  .lines,
+  .lines:before,
+  .lines:after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    background: #FFFFFF;
+    transition: 0.7s;
+  }
+  
+  .lines {
+    height: 3px;
+    margin-top: -2px;
+    top: 50%;
+  }
+  
+  .lines:before,
+  .lines:after {
+    content: '';
+    height: 100%;
+  
+    /* Try different values here: .25rem, .5rem, .2rem, 5rem, 10rem... */
+    transform-origin: 5rem center;
+  }
+  
+  .lines:before {
+    top: 8px;
+  }
+  
+  .lines:after {
+    top: -8px;
+  }
+  
+  /* CLOSE ICON */
+  
+  .close {
+    transform: scale3d(0.8, 0.8, 0.8);
+    
+  }
+  
+  .close .lines {
+      background: transparent;
+      width: 9vw;
+      
+      
+  }
+  
+  .close .lines:before,
+  .close .lines:after {
+    top: 0;
+    transform-origin: 50% 50%;
+  }
+  
+  .close .lines:before {
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
+  
+  .close .lines:after {
+    transform: rotate3d(0, 0, 1, -45deg);
+  }
+  #container{
+    position: relative;
+    top:43px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    
+  }
+  #content{
+    position: relative;
+    width: fit-content;
+    
+  }
+  .menu-search-input {
+    font-size: 1.286rem;
+    line-height: 1.286rem;
+    padding: 0.929rem 0.584rem;
+    padding-left: 2.714rem;
+    background: transparent;
+    color: #fff;
+    border: 0px;
+    border-bottom: 1px solid #fff;
+}
+.menu-search-input:focus{
+    background: transparent;
+    border: 0px;
+   
+  
+    outline: none;
+     border-bottom: 1px solid #fff;
+}
+.btn.btn-primary {
+    position: absolute;
+    top: 0.5rem;
+    right:1px;
+    padding: 0.75rem 0.9rem;
+    background-color: #FDC82F;
+    color: #222 ;
+    font-size: 0.9rem;
+    line-height: 1;
+    border-radius: 50px;
+    width: 4rem;
+    
+    
+}
+#iconSerche{
+  
+        position: absolute;
+        color: #222;
+        width: 10px;
+        top: 15px;
+
+        
+        
+        
+}
+#iconInputSerche{
+    position: absolute;
+        left: 1%;
+        color: #222;
+        width: 30px;
+        top: 23px;
+}
+#navbar{
+    display: flex;
+justify-content:start ;
+width: 100%;
+position: relative;
+}
+#navbar ul{
+    
+    position: relative; 
+    top:6px ;
+    padding-left: 0%;
+
+}
+#navbar ul button  {
+    padding: 16px 0 ;
+    
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+#navbar ul button :not(:last-child) {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+}
